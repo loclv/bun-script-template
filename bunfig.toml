@@ -1,4 +1,10 @@
+# https://bun.com/docs/runtime/bunfig
+
 [install]
 linker = "isolated"
 # 3 days
 minimumReleaseAge = 259200
+
+[run]
+# equivalent to `bun --bun` for all `bun run` commands
+bun = true
