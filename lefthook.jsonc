@@ -31,7 +31,7 @@
 	// Run full typechecking before pushing code
 	"pre-push": {
 		"commands": {
-			"typecheck": {
+			"type": {
 				"run": "bun run type"
 			}
 		}
