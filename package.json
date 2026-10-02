@@ -1,12 +1,18 @@
 {
   "name": "bun-script-template",
-  "module": "index.ts",
-  "type": "module",
-  "private": true,
+  "scripts": {
+    "d": "bun run index.ts",
+    "dev": "bun run index.ts",
+    "test": "bun test"
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },
   "peerDependencies": {
-    "typescript": "^7"
-  }
+    "typescript": "^7.0.2"
+  },
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "packageManager": "bun@1.4.2"
 }
