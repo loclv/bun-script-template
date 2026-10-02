@@ -1,0 +1,10 @@
+name,description,path
+readme,bun-script-template,README.md
+bun,,bun.lock
+bunfig,,bunfig.toml
+,Docs,docs/
+docs-readme,How to write and read docs,docs/README.md
+env-d,JavaScript/TypeScript module: env-d.,env.d.ts
+index,JavaScript/TypeScript module: index.,index.ts
+mise,,mise.toml
+rumdl,,rumdl.toml
