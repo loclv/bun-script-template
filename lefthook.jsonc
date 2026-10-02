@@ -1,0 +1,39 @@
+{
+	// Schema validation for Lefthook (https://lefthook.dev/)
+	"$schema": "https://json.schemastore.org/lefthook.json",
+	// Lint and format staged files before committing
+	"pre-commit": {
+		"parallel": true,
+		"commands": {
+			"biome-check": {
+				"glob": "*.{js,ts,jsx,tsx,json,jsonc,css,astro,html}",
+				"run": "bunx --bun biome check --write --no-errors-on-unmatched --files-ignore-unknown=true {staged_files}",
+				"stage_fixed": true
+			},
+			"rumdl": {
+				"glob": "*.md",
+				"run": "rumdl fmt {staged_files}",
+				"stage_fixed": true
+			}
+		}
+	},
+	// Validate commit message convention (e.g., feat: ..., fix: ...)
+	"commit-msg": {
+		"commands": {
+			"commitlint": {
+				// You can install commitlint with:
+				// - <https://github.com/quinnjr/cargo-commitlint>
+				// - `cargo install cargo-commitlint`
+				"run": "cargo commitlint check --edit {1}"
+			}
+		}
+	},
+	// Run full typechecking before pushing code
+	"pre-push": {
+		"commands": {
+			"typecheck": {
+				"run": "bun run type"
+			}
+		}
+	}
+}

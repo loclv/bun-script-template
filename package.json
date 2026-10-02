@@ -4,6 +4,7 @@
 		"d": "bun run index.ts",
 		"dev": "bun run index.ts",
 		"test": "bun test",
+		"type": "tsc --noEmit",
 		"fmt": "biome check --write",
 		"lint": "biome check"
 	},
